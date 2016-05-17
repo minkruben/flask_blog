@@ -8,6 +8,7 @@
         <li><h4>Tags</h4></li>
         {% for tag in entry.tag %}
             <li><a href="{{ url_for('entries.tag_detail', slug=tag.slug)}}">{{ tag.name}}</a></li>
+            <li><a href="{{ url_for('entries.edit', slug=entry.slug) }}">Edit</a></li>
         {% endfor %}
     </ul>
     <p>Published {{ entry.created_timestamp.strftime('%m/%d/%Y')}}</p>
